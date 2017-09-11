@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>人工智能编程范式</title>
+<!-- 2017-09-11 周一 13:13 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="王月阳" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">人工智能编程范式</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 第一章 lisp简介</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 第一章 lisp简介</h2>
+<div class="outline-text-2" id="text-1">
+<div class="center">
+<p>
+<i>学习lisp的时候，好记性不如烂笔头，烂笔头不如能教会别人，但只有你能用它来编程，才是真正的学会lisp。</i>
+</p>
+</div>
+
+<p>
+        这一章是给不会lisp或者对lisp一知半解的人阅读的。对lisp有较好的学习的人可以略读或者直接跳过这一章。阅读这一章感觉比较困
+难的读者应该阅读一些lisp相关的其他读物，我在前言里有推荐。
+</p>
+
+<p>
+        计算机主要功能是计算。字符处理程序主要处理字符，计算器主要用作数字计算，虽然处理对象不同但规则是一样的。在这两种场景
+中，我们提供输入信息（字符或者数字）和特定的处理程序（删除单词或对两个数字求和），然后获得处理结果（文档或者计算结果）。
+</p>
+
+<p>
+        我们把计算机内存中的所有东西都叫做可计算对象，或者对象。因为处理程序（删除与求和）也存放在计算机内存中，所有处理程序
+也是对象。
+</p>
+
+<p>
+        通常，计算机用户和程序员的区别是用户提供输入或者数据（字符或者数字），而程序员定义处理程序和数据的结构。每一个新的对
+象，不管是数据还是程序，都由底层提供的基本对象构成。坏消息是要获取底层定义的对象是非常乏味无聊的，好消息是我们定义的新对
+象都可以给以后的对象使用。而且哪怕很复杂的程序也是由简单的程序和数据结构组成的。这本书包含了几个典型的人工智能问题，并且
+详细的描述了这些问题是怎么被一步步拆分成可控的子问题，子问题又怎么用CommonLisp语言来描述的。比较理想的结果是读者通过学习
+本书可以优雅的解决新的人工智能问题。
+</p>
+
+<p>
+        让我们来思考一个简单计算例子：两个数字的求和问题，比如2和2求和。如果我们手边有计算器，我们可以直接输入“2+2=”获得计
+算结果。对于使用逆波兰式（后缀表达式）的计算器，我们只要输入“2 2 +”也可以获得计算结果。使用Lisp语言，就像计算器，用户
+在lisp窗口输入一个表达式，就可以看到计算机对表达式的求值结果。这种交互模式和大多数的编程语言不一样。他们只能先编译然后才
+能运行，获得结果。
+</p>
+
+<p>
+        我们通过电源按钮开启一个计算器。同样的，lisp程序也是需要启动的，但不同的系统中的启动方式不一样，本书就不解释lisp
+程序是怎么运行起来的了。假设我们已经启动了lisp程序，我们会看到程序提示符。在我的电脑里是"&gt;"，说明lisp已经准备好接受下一
+个表达式了。lisp运行环境看起来如下图：
+<a href="./pic/lispP.jpg">lisp启动成功显示</a>
+</p>
+
+<p>
+        现在我们就可以输入我们的表达式并且查看执行结果了。看起来lisp表达式跟其他的略有不同：lisp表达式由括号括起来的一个
+列表，其中第一位是操作符，后面跟着任意数量的操作数或者参数。这叫前缀表达式：
+<a href="./pic/prefix.jgp">前缀表达式</a>
+</p>
+
+<p>
+        Lisp已经打印出结果是4，并且显示出提示符"&gt;"，标明lisp程序准备好接收下一个计算。本书中所有的lisp表达式会以特殊字体
+展示。"&gt;"提示符后面的内容是用户输入，用户输入后面的是lisp计算输出的。一般来说，用户输入是小写的，lisp程序输出是大写的。
+当然+、4这些符号不会变化。
+</p>
+
+<p>
+为了节约排版，输出可能会和输入放到一行里，跟在=后面。比如 &gt; (+ 2 2) = 4。
+</p>
+
+<p>
+括号前缀表达式的好处之一就是括号明确来了表达式的起止位置。如果我们想，我们可以给+操作更多参数，也会得到求和结果：
+</p>
+<div class="org-src-container">
+
+<pre class="src src-lisp">&gt; (+ 1 2 3 4 5 6 7 8 9 10) = 55。
+</pre>
+</div>
+<p>
+我们再来试试(9000+900+90+9)-(5000+500+50+5)
+</p>
+<div class="org-src-container">
+
+<pre class="src src-lisp">&gt; (- (+ 9000 900 90 9) (+ 5000 500 50 5)) = 4444。
+</pre>
+</div>
+
+<p>
+        这个例子说明表达式是可以嵌套的。求差函数的参数是两个分别被括号括起来的列表，求和函数的每个参数都是原子数。lisp表
+达式与我们常见的数学表达式不一样，lisp表达式的操作符在前面，后面可以接任意多个参数，所以我们不需要像数学表达式那样用多个
++来连接参数。更重要的是，lisp表达式就是就是求值的规则。求值lisp表达式的时候，先对表达式的每个参数进行求值，然后将函数作
+用到参数上，进而得到结果。这个规则要比普通的数学表达式求值简单多了，比如数学表达式要先计算乘除，然后再计算加减。下面我们
+将看到复杂一点的lisp表达式求值，但要比数学表达式求值规则简单些。
+</p>
+
+<p>
+        对于有些有其他编程语言经历的人，其他语言的编程思维可能影响到学习lisp。对于这类人，有三点要注意：首先许多其他语言
+会区分表达式还还是赋值声明。一个表达式会有返回值比如2+2会返回4，但一个赋值声明是没有返回结果的比如x=2+2这样的。赋值声明
+会产生副作用，但是没有返回值。lisp不区分表达式还是赋值声明，每个表达式都有返回值。即便有些表达式有副作用但也有返回值。
+</p>
+
+<p>
+其次，lisp的语法规则要比其他语言的语法规则简单很多。特别是符号比较少，只有括号，引用
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-09-01 Wed 19:15&gt;</span></span></p>
+<p class="author">Author: 王月阳</p>
+<p class="date">Created: 2017-09-11 周一 13:13</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
